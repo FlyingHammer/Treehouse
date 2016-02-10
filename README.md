@@ -1,5 +1,5 @@
 ## Treehouse
 
-This Repo is for all my course work files completed through treamtreehouse.com
+This Repo is for all my course work file completed through treamtreehouse.com
 
-Check my Treehouse profile - www.teamtreehouse.com/garymckay
+Also check out my Treehouse Profile [here] (https://teamtreehouse.com/garymckay)
