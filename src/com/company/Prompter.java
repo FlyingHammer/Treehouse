@@ -16,6 +16,7 @@ public class Prompter {
         this.mGame = game;
     }
 
+
     public boolean PromptForGuess() {
         Scanner console = new Scanner(System.in);
         //String guessAsString = console.readLine("Enter a Letter: ");
@@ -23,6 +24,10 @@ public class Prompter {
         String guessAsString = console.nextLine();
         char guess = guessAsString.charAt(0);
         return mGame.applyGuess(guess);
+    }
+
+    public void displayProgress() {
+        System.out.printf("Try to Solve: %s\n" , mGame.getCurrentProgress());
     }
 
 }
