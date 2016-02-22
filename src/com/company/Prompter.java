@@ -16,6 +16,14 @@ public class Prompter {
         this.mGame = game;
     }
 
+    public void play() {
+        while (mGame.getRemainingTries() > 0) {
+            displayProgress();
+            PromptForGuess();
+
+        }
+    }
+
 
     public boolean PromptForGuess() {
         Scanner console = new Scanner(System.in);
@@ -27,7 +35,9 @@ public class Prompter {
     }
 
     public void displayProgress() {
-        System.out.printf("Try to Solve: %s\n" , mGame.getCurrentProgress());
+        System.out.printf("You have %d tries left to Solve: %s\n" ,
+                            mGame.getRemainingTries(),
+                            mGame.getCurrentProgress());
     }
 
 }
