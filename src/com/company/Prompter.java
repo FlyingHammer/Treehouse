@@ -24,14 +24,26 @@ public class Prompter {
         }
     }
 
-
     public boolean PromptForGuess() {
         Scanner console = new Scanner(System.in);
         //String guessAsString = console.readLine("Enter a Letter: ");
-        System.out.printf("Enter a Letter ");
-        String guessAsString = console.nextLine();
-        char guess = guessAsString.charAt(0);
-        return mGame.applyGuess(guess);
+        boolean isHit = false;
+        boolean isValidGuess = false;
+        while (!isValidGuess){
+            System.out.printf("Enter a Letter ");
+            String guessAsString = console.nextLine();
+            char guess = guessAsString.charAt(0);
+            try {
+                isHit = mGame.applyGuess(guess);
+                isValidGuess = true;
+            } catch (IllegalArgumentException iae) {
+                System.out.printf("%s. Please try again. \n", iae.getMessage());
+            }
+        }
+
+        return isHit;
+
+
     }
 
     public void displayProgress() {

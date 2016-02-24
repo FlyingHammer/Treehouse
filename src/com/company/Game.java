@@ -15,10 +15,24 @@ public class Game {
         this.mAnswer = answer;
         mHits = "";
         mMisses = "";
-
     }
 
+    private char validateGuess(char letter) {
+        if (!Character.isLetter(letter)) {
+            throw new IllegalArgumentException("A letter is required");
+        }
+        letter = Character.toLowerCase(letter);
+        if (mMisses.indexOf(letter) >= 0 || mMisses.indexOf(letter) >= 0) {
+
+            throw new IllegalArgumentException(letter + " has already been guessed!");
+        }
+
+        return letter;
+    }
+
+
     public boolean applyGuess(char letter) {
+        letter = validateGuess(letter);
         boolean isHits = mAnswer.indexOf(letter) >= 0;
         if (isHits) {
             mHits = mHits + letter; // could also use mHits += Letter, but I think this is more readable.
@@ -31,7 +45,7 @@ public class Game {
     public String getCurrentProgress() {
 
         String progress = "";
-        for (char letter : mAnswer.toCharArray()) {
+         for (char letter : mAnswer.toCharArray()) {
             char display = '-';
             if (mHits.indexOf(letter) >= 0) {
                 display = letter;
