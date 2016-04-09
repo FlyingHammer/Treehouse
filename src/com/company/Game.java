@@ -31,6 +31,14 @@ public class Game {
     }
 
 
+    public boolean applyGuess(String letters) {
+        if (letters.length() == 0) {
+            throw new IllegalArgumentException("No Letters Found");
+        }
+
+        return applyGuess(letters.charAt(0));
+    }
+
     public boolean applyGuess(char letter) {
         letter = validateGuess(letter);
         boolean isHits = mAnswer.indexOf(letter) >= 0;

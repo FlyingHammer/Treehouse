@@ -32,9 +32,9 @@ public class Prompter {
         while (!isValidGuess){
             System.out.printf("Enter a Letter ");
             String guessAsString = console.nextLine();
-            char guess = guessAsString.charAt(0);
+            // char guess = guessAsString.charAt(0); -- Refactor to use new Method, See Below
             try {
-                isHit = mGame.applyGuess(guess);
+                isHit = mGame.applyGuess(guessAsString);
                 isValidGuess = true;
             } catch (IllegalArgumentException iae) {
                 System.out.printf("%s. Please try again. \n", iae.getMessage());
