@@ -17,9 +17,19 @@ public class Prompter {
     }
 
     public void play() {
-        while (mGame.getRemainingTries() > 0) {
+        while (mGame.getRemainingTries() > 0 && !mGame.isSolved()) {
             displayProgress();
             PromptForGuess();
+
+        }
+
+        if (mGame.isSolved()) {
+
+            System.out.printf("Congrats, you won! with only %d tries left. \n", mGame.getRemainingTries());
+        } else  {
+
+            System.out.printf("Ah Damn, the word was %s. :(\n", mGame.getAnswer());
+
 
         }
     }

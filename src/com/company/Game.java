@@ -66,5 +66,16 @@ public class Game {
     public int getRemainingTries() {
         return MAX_MISSES - mMisses.length();
     }
+
+    public String getAnswer() {
+        return mAnswer;
+    }
+
+    public boolean isSolved() {
+        // Lets check to see if there are any '-' left
+        // if there is none left, then the word has been solved
+        // if not, well, then you loose.
+        return getCurrentProgress().indexOf('-') == 0;
+    }
  }
 
