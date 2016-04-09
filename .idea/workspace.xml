@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcf1477e-d9ba-4ee7-84cd-3ab1640d8bda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Game.java" afterPath="$PROJECT_DIR$/src/com/company/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Prompter.java" afterPath="$PROJECT_DIR$/src/com/company/Prompter.java" />
-    </list>
+    <list default="true" id="dcf1477e-d9ba-4ee7-84cd-3ab1640d8bda" name="Default" comment="" />
     <ignored path="Hangman.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
